@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Salsa", cursive;
+  color: #fff;
+  background-color: #001815;
+}
+
+.column--1 {
+  /* border: 2px solid red; */
+  line-height: 1.8;
+}
+.column--1 h2 {
+  font-size: 45px;
+}
+.column--1 p {
+  font-size: 25px;
+}
+.column--1 p a {
+  position: relative;
+  color: #296560;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.column--1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translate(0, 3px);
+  height: 3px;
+  background: #296560;
+}
+
+.column--1 nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 25px;
+  list-style: none;
+  text-transform: capitalize;
+}
+nav ul li {
+  position: relative;
+  cursor: pointer;
+}
+ul li:hover {
+    color: #296560;
+  transition: all 300ms linear;
+
+}
+/* hover menu */
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #296560;
+  transform: scale(0);
+  transition: transform 300ms linear;
+}
+
+ li:hover::after {
+  transform: scale(1);
+  transform-origin: left;
+}
+.social--icon {
+  margin-top: 20px;
+}
+.social--icon > i {
+  margin-right: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 8px;
+  border-radius: 50px;
+}
+
+.column--2 .img--container {
+  border: 2.5px solid #87fff3;
+  height: 350px;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-left: -5rem;
+}
+
+.img--container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
